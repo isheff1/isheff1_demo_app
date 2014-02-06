@@ -4,6 +4,8 @@ Isheff1DemoApp::Application.configure do
   # Code is not reloaded between requests.
   config.cache_classes = true
 
+  config.log_level = ENV['LOG_LEVEL'] ? ENV['LOG_LEVEL'].to_sym : ('info').to_sym
+
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both thread web servers
   # and those relying on copy on write to perform better.
